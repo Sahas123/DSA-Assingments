@@ -1,0 +1,65 @@
+Assignment Problem 1 :
+input : Sorted array of n distinct elements which are integers
+
+output : Find any element in an array such that an array element and it's corresponding index is same meaning array[i] = i.
+
+Write an optimised code with its time complexity for above problem statement.
+
+#Solution
+
+def seqential(a):                      # Problem solved using sequential search
+  i=0                                  # Initializing low index
+  
+  for n in a:                          #Iterating array to check the condition if i==a[i] return element else return as -1
+    if (i==a[i]):
+      return a[i]
+    i=i+1
+    
+  return -1
+    
+    
+
+
+#Time Complexity :
+#Best case : O(1) [Anything which is close to the starting element of an array]
+#Worst case : O(n) [Anything which is close to the last element of an array]
+
+
+
+a=[1,2,3,4,4,5]
+seqential(a)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Assignment Problem 2 : Two Sum Problem
+
+https://leetcode.com/problems/two-sum/
+
+
+Solution:
+
+
+def sum(a,target):
+  
+  i=0                   #initializing the variable to sum with iterating element
+
+  for p in a:           # Iterating elements from array in to 'P' as local variable
+    if (a[i]==p):       # If two operands are equal skip it, helps to avoid adding with itself
+      continue
+    if a[i]+p==target:  #Checking array elements sum equal to target element 
+      
+      return a[i],p     #Returning array elememts that sums target element
+    i=i+1               
+  
+
+a=[2,7,11,15]           #Array passing as input
+sum(a,18)               #Calling method sum
+  
+                
+                
+#Time Complexity :
+#Best case : O(1) [sum of elemnts from first two indexes]
+#Worst case : O(n) [Anything which is close to the last element of an array]
+        
+        
